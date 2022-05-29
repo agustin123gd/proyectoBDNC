@@ -1,0 +1,57 @@
+1.-crear una base de datos en node4j
+2.-crear un archivo cyp
+
+el archivo cyp guardaria todos los datos de una persona:
+
+*Estructura para crear un nodo en la base de datos*
+
+CREATE(nombredelnodo:etiqueta{propiedad:"ejemplo"})
+
+Ejemplo:
+CREATE (luis:persona {name:"Luis"})
+
+*Estructura para crear una relación*
+
+CREATE (nombredelnodo)-[:relación]->(nombredelnodo)
+
+Ejemplo:
+CREATE (luis)-[:amigo]->(felipe)
+
+
+*Estructura para consultar*
+
+MATCH(n) RETURN n
+
+regresa todos los nodos de la base de datos
+
+_____________________________________________________________
+
+
+MATCH (luis:persona {name:"Luis"})
+SET luis.birthday=date("2000")
+RETURN luis
+
+Busca el nodo con los datos mandados y despues inserta una propiedad con su valor
+
+________________________________________________________________
+
+
+MATCH (carlos:persona {name: "Carlos"} )
+DETACH DELETE carlos
+
+Elimina a la persona de la base de datos
+
+
+_______________________________________________________________
+
+MATCH(luis:persona),(ud:universidad)
+WHERE luis.name = "Luis" AND ud.name= "Universidad Veracruzana"
+CREATE (luis)-[:Estudiante]->(ud)
+
+Crea una relación pero por medio de una condición
+
+__________________________________________________________________
+
+
+
+
