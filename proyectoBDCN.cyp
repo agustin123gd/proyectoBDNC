@@ -3,6 +3,10 @@ CREATE (luis:estudiantes {nombre:"Luis",apellidos:"Perez Lopez",edad:"19",matric
 
 //Materias
 CREATE (bdnc:materias {nombre:"Base de datos no convencionales",creditos:"6",horasSemana:"4"})
+CREATE (gr:materias {nombre:"Graficacion",creditos:"6",horasSemana:"4"})
+CREATE (pa:materias {nombre:"Programación Avanzada",creditos:"7",horasSemana:"6"})
+CREATE (ed:materias {nombre:"Estructuras de datos",creditos:"5",horasSemana:"6"})
+CREATE (is:materias {nombre:"Ingenieria de software",creditos:"6",horasSemana:"5"})
 
 //Estatus
 CREATE (estatus1:estatus {Calificacion:"8.0",estatus:"Aprobado",inscripcion:"Primera"})
